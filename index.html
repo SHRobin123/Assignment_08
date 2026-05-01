@@ -281,6 +281,181 @@
     </div>
   </div>
 
+  <!-- ══════════════════════ LOGIN PAGE ══════════════════════ -->
+  <div id="page-login" class="page" style="display:none">
+    <div class="auth-bg">
+      <div class="auth-card">
+        <div class="auth-header">
+          <div class="auth-logo">☀ SunCart</div>
+          <h2>Welcome Back</h2>
+          <p>Sign in to your account</p>
+        </div>
+        <div id="loginError" class="auth-error" style="display:none"></div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" />
+        </div>
+        <button class="btn-auth" onclick="handleLogin()">Login →</button>
+        <div class="auth-divider"><span>or</span></div>
+        <button class="btn-google" onclick="handleGoogleAuth()">
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          Continue with Google
+        </button>
+        <p class="auth-switch">Don't have an account? <a href="#" onclick="navigate('register')">Register here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ REGISTER PAGE ══════════════════════ -->
+  <div id="page-register" class="page" style="display:none">
+    <div class="auth-bg">
+      <div class="auth-card">
+        <div class="auth-header">
+          <div class="auth-logo">☀ SunCart</div>
+          <h2>Create Account</h2>
+          <p>Join thousands of summer lovers</p>
+        </div>
+        <div id="registerError" class="auth-error" style="display:none"></div>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="regName" placeholder="Your full name" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="regEmail" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Photo URL (optional)</label>
+          <input type="url" id="regPhoto" placeholder="https://your-photo-url.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="regPassword" placeholder="Minimum 6 characters" />
+        </div>
+        <button class="btn-auth" onclick="handleRegister()">Create Account →</button>
+        <div class="auth-divider"><span>or</span></div>
+        <button class="btn-google" onclick="handleGoogleAuth()">
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          Continue with Google
+        </button>
+        <p class="auth-switch">Already have an account? <a href="#" onclick="navigate('login')">Login here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ PROFILE PAGE ══════════════════════ -->
+  <div id="page-profile" class="page" style="display:none">
+    <div class="page-hero">
+      <div class="container"><h1>My Profile</h1><p>Manage your SunCart account</p></div>
+    </div>
+    <div class="container" style="padding:3rem 1rem">
+      <div class="profile-wrap">
+        <div class="profile-card">
+          <div class="profile-avatar-wrap">
+            <img id="profileAvatar" src="" alt="avatar" class="profile-avatar" />
+            <div class="profile-badge">☀ Member</div>
+          </div>
+          <div class="profile-info">
+            <h2 id="profileName">—</h2>
+            <p id="profileEmail" class="profile-email">—</p>
+            <div class="profile-meta">
+              <span class="meta-item">🛒 Active Member</span>
+              <span class="meta-item">🌞 Summer Lover</span>
+            </div>
+            <div class="profile-actions">
+              <button class="btn-primary" onclick="navigate('update')">Update Information</button>
+              <button class="btn-outline-dark" onclick="logout()">Logout</button>
+            </div>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div class="stat-card"><div class="stat-num">12</div><div class="stat-label">Items Viewed</div></div>
+          <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Wishlist</div></div>
+          <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Orders</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ UPDATE PROFILE PAGE ══════════════════════ -->
+  <div id="page-update" class="page" style="display:none">
+    <div class="auth-bg" style="min-height:100vh;padding-top:6rem">
+      <div class="auth-card">
+        <div class="auth-header">
+          <div class="auth-logo">☀ SunCart</div>
+          <h2>Update Profile</h2>
+          <p>Change your name or profile photo</p>
+        </div>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="updateName" placeholder="Your full name" />
+        </div>
+        <div class="form-group">
+          <label>Photo URL</label>
+          <input type="url" id="updatePhoto" placeholder="https://your-photo.com/img.jpg" />
+        </div>
+        <div class="update-preview" id="updatePreview" style="display:none">
+          <img id="previewImg" src="" alt="preview" />
+        </div>
+        <button class="btn-auth" onclick="handleUpdate()">Save Changes →</button>
+        <p class="auth-switch" style="margin-top:1rem"><a href="#" onclick="navigate('profile')">← Back to Profile</a></p>
+      </div>
+    </div>
+  </div>
+
+</main><!-- /app -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">☀ SunCart</div>
+        <p>Your one-stop destination for summer essentials. Quality products for every sunny day.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">tw</a>
+          <a href="#" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#" onclick="navigate('home')">Home</a>
+        <a href="#" onclick="navigate('products')">Products</a>
+        <a href="#" onclick="navigate('login')">Login</a>
+        <a href="#" onclick="navigate('register')">Register</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="#">Accessories</a>
+        <a href="#">Skincare</a>
+        <a href="#">Clothing</a>
+        <a href="#">Beach Gear</a>
+        <a href="#">Footwear</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>📍 123 Summer Ave, Beach City</p>
+        <p>📞 +1 (800) SUN-CART</p>
+        <p>✉ hello@suncart.com</p>
+        <p>🕐 Mon–Sat: 9AM – 6PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 SunCart. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
     <script src="app.js"></script>
 </body>
