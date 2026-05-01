@@ -251,6 +251,37 @@
 
   </div><!-- /page-home -->
 
+
+   <!-- ══════════════════════ PRODUCTS PAGE ══════════════════════ -->
+  <div id="page-products" class="page" style="display:none">
+    <div class="page-hero">
+      <div class="container">
+        <h1>Summer Collection</h1>
+        <p>Everything you need for the perfect summer</p>
+      </div>
+    </div>
+    <div class="container" style="padding:3rem 1rem">
+      <div class="products-filter">
+        <button class="filter-btn active" onclick="filterProducts('All',this)">All</button>
+        <button class="filter-btn" onclick="filterProducts('Accessories',this)">Accessories</button>
+        <button class="filter-btn" onclick="filterProducts('Skincare',this)">Skincare</button>
+        <button class="filter-btn" onclick="filterProducts('Clothing',this)">Clothing</button>
+        <button class="filter-btn" onclick="filterProducts('Beach',this)">Beach</button>
+        <button class="filter-btn" onclick="filterProducts('Footwear',this)">Footwear</button>
+      </div>
+      <div class="products-grid" id="allProductsGrid"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ PRODUCT DETAIL ══════════════════════ -->
+  <div id="page-detail" class="page" style="display:none">
+    <div class="container" style="padding:6rem 1rem 3rem">
+      <button class="back-btn" onclick="navigate('products')">← Back to Products</button>
+      <div class="detail-wrap" id="detailContent"></div>
+    </div>
+  </div>
+
+
     <script src="app.js"></script>
 </body>
 </html>
