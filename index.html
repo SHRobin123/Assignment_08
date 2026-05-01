@@ -61,6 +61,102 @@
   </div>
 </nav>
     
+<!-- PAGES -->
+<main id="app">
+
+  <!-- ══════════════════════ HOME PAGE ══════════════════════ -->
+  <div id="page-home" class="page">
+
+    <!-- HERO SLIDER -->
+    <section class="hero-section">
+      <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide slide-1 active">
+          <div class="hero-content animate__animated animate__fadeInUp">
+            <div class="hero-badge">🔥 Hot Summer Deals</div>
+            <h1>Summer Sale<br><span class="highlight">50% OFF</span></h1>
+            <p>Explore our curated collection of summer essentials. Sunglasses, outfits, skincare & more.</p>
+            <div class="hero-btns">
+              <button class="btn-hero" onclick="navigate('products')">Shop Now →</button>
+              <button class="btn-hero-outline" onclick="scrollToSection('popular')">Explore Deals</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-img-wrap">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="summer beach" />
+              <div class="hero-badge-float">🏖️ Beach Ready</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="hero-slide slide-2">
+          <div class="hero-content animate__animated animate__fadeInUp">
+            <div class="hero-badge">✨ New Arrivals</div>
+            <h1>Hot Deals<br><span class="highlight">This Season</span></h1>
+            <p>Premium skincare, trendy sunglasses and beachwear at unbeatable prices.</p>
+            <div class="hero-btns">
+              <button class="btn-hero" onclick="navigate('products')">Browse All →</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-img-wrap">
+              <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc2f?w=600&q=80" alt="summer fashion" />
+              <div class="hero-badge-float">☀️ Sun Ready</div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- ONLY replace the broken 2 image paths in your index.html -->
+
+<!-- HERO SLIDER - Slide 2 -->
+<div class="hero-slide slide-2">
+  <div class="hero-content animate__animated animate__fadeInUp">
+    <div class="hero-badge">✨ New Arrivals</div>
+    <h1>Hot Deals<br><span class="highlight">This Season</span></h1>
+    <p>Premium skincare, trendy sunglasses and beachwear at unbeatable prices.</p>
+    <div class="hero-btns">
+      <button class="btn-hero" onclick="navigate('products')">Browse All →</button>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-img-wrap">
+      <!-- UPDATED IMAGE -->
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=80" alt="summer fashion" />
+      <div class="hero-badge-float">☀️ Sun Ready</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+        <div class="hero-slide slide-3">
+          <div class="hero-content animate__animated animate__fadeInUp">
+            <div class="hero-badge">🌊 Beach Collection</div>
+            <h1>Dive Into<br><span class="highlight">Summer</span></h1>
+            <p>Everything you need for the perfect summer adventure — packed in one store.</p>
+            <div class="hero-btns">
+              <button class="btn-hero" onclick="navigate('products')">Get Summer Ready →</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-img-wrap">
+              <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=600&q=80" alt="summer accessories" />
+              <div class="hero-badge-float">🕶️ Style Up</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots" id="heroDots">
+        <button class="dot active" onclick="goToSlide(0)"></button>
+        <button class="dot" onclick="goToSlide(1)"></button>
+        <button class="dot" onclick="goToSlide(2)"></button>
+      </div>
+      <button class="slide-arrow slide-prev" onclick="prevSlide()">‹</button>
+      <button class="slide-arrow slide-next" onclick="nextSlide()">›</button>
+    </section>
+
     <script src="app.js"></script>
 </body>
 </html>
