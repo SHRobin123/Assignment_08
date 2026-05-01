@@ -9,6 +9,57 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
+
+    
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo" onclick="navigate('home')">
+      <span class="logo-sun">☀</span> SunCart
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#" onclick="navigate('home')" class="nav-link active" data-page="home">Home</a>
+      <a href="#" onclick="navigate('products')" class="nav-link" data-page="products">Products</a>
+      <a href="#" onclick="navigate('profile')" class="nav-link" data-page="profile" id="profileNavLink" style="display:none">My Profile</a>
+    </div>
+    <div class="nav-actions">
+      <div id="authButtons">
+        <button class="btn-outline" onclick="navigate('login')">Login</button>
+        <button class="btn-primary" onclick="navigate('register')">Register</button>
+      </div>
+      <div id="userMenu" style="display:none" class="user-menu">
+        <div class="avatar-wrap" onclick="toggleUserDropdown()">
+          <img id="navAvatar" src="" alt="avatar" class="nav-avatar" />
+          <span id="navUserName" class="nav-username"></span>
+          <span class="chevron">▾</span>
+        </div>
+        <div class="user-dropdown" id="userDropdown">
+          <a href="#" onclick="navigate('profile'); closeDropdown()">My Profile</a>
+          <a href="#" onclick="navigate('update'); closeDropdown()">Update Info</a>
+          <a href="#" onclick="logout(); closeDropdown()" class="logout-link">Logout</a>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="navigate('home');closeMobile()">Home</a>
+    <a href="#" onclick="navigate('products');closeMobile()">Products</a>
+    <a href="#" onclick="navigate('profile');closeMobile()" id="mobileProfile" style="display:none">My Profile</a>
+    <div id="mobileAuth">
+      <a href="#" onclick="navigate('login');closeMobile()">Login</a>
+      <a href="#" onclick="navigate('register');closeMobile()">Register</a>
+    </div>
+    <div id="mobileLogout" style="display:none">
+      <a href="#" onclick="logout();closeMobile()">Logout</a>
+    </div>
+  </div>
+</nav>
     
     <script src="app.js"></script>
 </body>
